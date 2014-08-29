@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="MetaMiles" representedClassName="MetaMiles" syncable="YES">
+        <attribute name="beg_school" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="end_school" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="miles" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="UserMiles" representedClassName="UserMiles" syncable="YES">
+        <attribute name="beg_school" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="driven_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="end_school" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="entry_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="miles" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MetaMiles" positionX="133" positionY="-250" width="128" height="88"/>
+        <element name="UserMiles" positionX="135" positionY="-148" width="128" height="133"/>
+    </elements>
+</model>

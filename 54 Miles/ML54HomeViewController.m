@@ -35,7 +35,7 @@
     NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"driven_date" ascending:YES];
     if (trips != nil){
     trips = [trips sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
-    //reverse the array so the 4 most recent are the first 4 listed
+    //reverse the array so the 5 most recent are the first 5 listed
     trips = [[trips reverseObjectEnumerator] allObjects];
     } else {
     }
@@ -56,7 +56,7 @@
     trips = [UserMiles MR_findAllSortedBy:@"driven_date" ascending:YES];
     NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"driven_date" ascending:YES];
     trips = [trips sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
-    //reverse the array so the 4 most recent are the first 4 listed
+    //reverse the array so the 5 most recent are the first 5 listed
     trips = [[trips reverseObjectEnumerator] allObjects];
     [self.recentMilesTable reloadData];
     //Refresh the view if coming from the profile view (first run of App)
@@ -91,11 +91,11 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if ([trips count]<4)
+    if ([trips count]<5)
     {
         return [trips count];
     } else {
-        return 4;
+        return 5;
     }
 }
 

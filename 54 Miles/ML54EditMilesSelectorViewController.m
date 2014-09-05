@@ -43,15 +43,15 @@
     monthArray = [df monthSymbols];
     int i = 0;
     while (i < [monthArray count]) {
-    NSLog(@"month array: %@", [monthArray objectAtIndex:i]);
+    //NSLog(@"month array: %@", [monthArray objectAtIndex:i]);
         i++;
     }
     //Get Current Month
     [df setDateFormat:@"MMMM"];
     NSString *currentMonth = [NSString stringWithFormat:@"%@", [df stringFromDate:date]];
-    NSLog(@"current month: %@", currentMonth);
+    //NSLog(@"current month: %@", currentMonth);
     int currentMonthIndex = [monthArray indexOfObject:currentMonth];
-    NSLog(@"Current month index: %d",currentMonthIndex);
+    //NSLog(@"Current month index: %d",currentMonthIndex);
     [_editMilesPicker selectRow:currentMonthIndex inComponent:0 animated:YES];
     //Initialize our yearArray
     yearArray = [[NSMutableArray alloc]init];

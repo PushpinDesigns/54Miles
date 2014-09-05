@@ -162,9 +162,7 @@
     begSchool = [cellDetails beg_school];
     endSchool = [cellDetails end_school];
     drivenDate = [cellDetails driven_date];
-    NSLog(@"Segue Should fire now...");
     [self performSegueWithIdentifier:@"editTrip" sender:self];
-    NSLog(@"Segue Did fire!");
 }
 
 - (NSPredicate *)predicateToRetrieveMonthTrips {

@@ -55,6 +55,9 @@ MetaMiles *school;
     //Set selector method for datePicker so on the value change it updates the date
     [self.datePicker addTarget:self action:@selector(updateLabelForDate:) forControlEvents:UIControlEventValueChanged];
     
+    //listen for notifications for when the app becomes active and refresh the datePicker
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshDatePicker) name:UIApplicationDidBecomeActiveNotification object:nil];
+    
     //Check to see if there is previous UserMiles entered - if so, set beg_school to appropriate name
     //you COULD use driven_date here to get the last trip they drove on for the initial load of the app
     NSArray *tripsSorted = [UserMiles MR_findAllSortedBy:@"entry_date" ascending:YES];
@@ -89,7 +92,15 @@ MetaMiles *school;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)refreshDatePicker {
+    // Set datePicker to current date/time
+    [self.datePicker setDate:[NSDate date]];
+}
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self refreshDatePicker];
+}
 //Button to track miles
 - (IBAction)trackMilesButton:(id)sender {
     //When button is clicked - save the trip to the User_Miles database!

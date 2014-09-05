@@ -200,8 +200,8 @@
     [_fetchedResultsController performFetch:&error];
     allTableData = [_fetchedResultsController fetchedObjects];
     
-    NSString *header = @"<?xml version=\"1.0\"?>\n<?mso-application progid=\"Excel.Sheet\"?>\n<Workbook xmlns=\"urn:schemas-microsoft-com:office:spreadsheet\"\nxmlns:o=\"urn:schemas-microsoft-com:office:office\"\nxmlns:x=\"urn:schemas-microsoft-com:office:excel\"\nxmlns:ss=\"urn:schemas-microsoft-com:office:spreadsheet\"\nxmlns:html=\"http://www.w3.org/TR/REC-html40\">\n<Styles><Style ss:ID=\"s11\"><Alignment ss:Horizontal=\"Center\" ss:Vertical=\"Bottom\"/><Borders><Border ss:Position=\"Bottom\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/><Border ss:Position=\"Left\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/><Border ss:Position=\"Right\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/><Border ss:Position=\"Top\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/></Borders></Style><Style ss:ID=\"s12\"><Alignment ss:Horizontal=\"Center\" ss:Vertical=\"Bottom\"/></Style><Style ss:ID=\"s13\"><Alignment ss:Horizontal=\"Center\" ss:Vertical=\"Bottom\"/><Font ss:Bold=\"1\"/></Style><Style ss:ID=\"s14\"><Alignment ss:Horizontal=\"Center\" ss:Vertical=\"Bottom\"/><Borders><Border ss:Position=\"Bottom\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/><Border ss:Position=\"Left\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/><Border ss:Position=\"Right\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/><Border ss:Position=\"Top\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/></Borders><Font ss:Bold=\"1\"/><Interior ss:Color=\"#C0C0C0\" ss:Pattern=\"Solid\"/></Style></Styles>\n<Worksheet ss:Name=\"54Mileage\">\n<Table ss:DefaultColumnWidth=\"117\">\n";
-    NSString *columnAutoWidth30 = @"<Column ss:AutoFitWidth=\"1\" ss:Width=\"180\"/>\n";
+    NSString *header = @"<?xml version=\"1.0\"?>\n<?mso-application progid=\"Excel.Sheet\"?>\n<Workbook xmlns=\"urn:schemas-microsoft-com:office:spreadsheet\"\nxmlns:o=\"urn:schemas-microsoft-com:office:office\"\nxmlns:x=\"urn:schemas-microsoft-com:office:excel\"\nxmlns:ss=\"urn:schemas-microsoft-com:office:spreadsheet\"\nxmlns:html=\"http://www.w3.org/TR/REC-html40\">\n<Styles><Style ss:ID=\"s11\"><Alignment ss:Horizontal=\"Center\" ss:Vertical=\"Bottom\"/><Borders><Border ss:Position=\"Bottom\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/><Border ss:Position=\"Left\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/><Border ss:Position=\"Right\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/><Border ss:Position=\"Top\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/></Borders></Style><Style ss:ID=\"s12\"><Alignment ss:Horizontal=\"Center\" ss:Vertical=\"Bottom\"/></Style><Style ss:ID=\"s13\"><Alignment ss:Horizontal=\"Center\" ss:Vertical=\"Bottom\"/><Font ss:Bold=\"1\"/></Style><Style ss:ID=\"s14\"><Alignment ss:Horizontal=\"Center\" ss:Vertical=\"Bottom\"/><Borders><Border ss:Position=\"Bottom\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/><Border ss:Position=\"Left\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/><Border ss:Position=\"Right\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/><Border ss:Position=\"Top\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/></Borders><Font ss:Bold=\"1\"/><Interior ss:Color=\"#C0C0C0\" ss:Pattern=\"Solid\"/></Style><Style ss:ID=\"s15\"><Alignment ss:Horizontal=\"Center\" ss:Vertical=\"Bottom\"/><Font ss:Bold=\"1\"/><NumberFormat ss:Format=\"&quot;$&quot;#,##0.00\"/></Style></Styles>\n<Worksheet ss:Name=\"54Mileage\">\n<Table ss:DefaultColumnWidth=\"117\">\n";
+    NSString *columnAutoWidth30 = @"<Column ss:AutoFitWidth=\"1\" ss:Width=\"170\"/>\n";
     NSString *columnAutoWidth16 = @"<Column ss:AutoFitWidth=\"1\" ss:Width=\"95\"/>\n";
     //NSString *columncount = @"\" ss:ExpandedRowCount=\"";
     //NSString *rowcount = @"\" x:FullColumns=\"1\"x:FullRows=\"1\">\n";
@@ -222,7 +222,6 @@
     NSString *centeredStringEnd = @"</Data></Cell>";
     
     NSString *centeredBoldStringStart = @"<Cell ss:StyleID=\"s13\"><Data ss:Type=\"String\">";
-    
     NSString *centeredBoldBGStringStart = @"<Cell ss:StyleID=\"s14\"><Data ss:Type=\"String\">";
 
     int numberOfRows = 0;
@@ -234,7 +233,7 @@
     NSString *totalMilesFormulaStart = [NSString stringWithFormat:@"<Cell ss:StyleID=\"s13\" ss:Formula=\"=SUM(R[-%d]C[2]:R[-2]C[2])\"><Data ss:Type=\"Number\">",(numberOfRows+1)];
     NSString *totalMilesFormulaEnd = @"</Data></Cell>";
     //Total due formula
-    NSString *dollarAmountFormulaStart = [NSString stringWithFormat:@"<Cell ss:StyleID=\"s13\" ss:Formula=\"=R[0]C[-2]*%@\"><Data ss:Type=\"Number\">",_mileageRateTextField.text];
+    NSString *dollarAmountFormulaStart = [NSString stringWithFormat:@"<Cell ss:StyleID=\"s15\" ss:Formula=\"=R[0]C[-2]*%@\"><Data ss:Type=\"Number\">",_mileageRateTextField.text];
     NSString *dollarAmountFormulaEnd = @"</Data></Cell>";
     
     NSString *footer = @"</Table>\n</Worksheet>\n</Workbook>";

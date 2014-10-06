@@ -9,6 +9,19 @@
 /* Begin PBXBuildFile section */
 		BB14A1D418A5883D00AF04C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB14A1D318A5883D00AF04C6 /* Main.storyboard */; };
 		BB14A1D718C1254300AF04C6 /* ML54tabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = BB14A1D618C1254300AF04C6 /* ML54tabbar.m */; };
+		BB4DAF9A19E2E2AB00C133F8 /* 54miles-logo-57.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4DAF9019E2E2AB00C133F8 /* 54miles-logo-57.png */; };
+		BB4DAF9B19E2E2AB00C133F8 /* 54miles-logo-57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4DAF9119E2E2AB00C133F8 /* 54miles-logo-57@2x.png */; };
+		BB4DAF9E19E2E2AB00C133F8 /* 54miles-logo-72.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4DAF9419E2E2AB00C133F8 /* 54miles-logo-72.png */; };
+		BB4DAFA019E2E2AB00C133F8 /* 54miles-logo-76.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4DAF9619E2E2AB00C133F8 /* 54miles-logo-76.png */; };
+		BB4DAFA119E2E2AB00C133F8 /* 54miles-logo-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4DAF9719E2E2AB00C133F8 /* 54miles-logo-76@2x.png */; };
+		BB4DAFAB19E2E78E00C133F8 /* 54miles-logo-29.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4DAFA419E2E78E00C133F8 /* 54miles-logo-29.png */; };
+		BB4DAFAC19E2E78E00C133F8 /* 54miles-logo-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4DAFA519E2E78E00C133F8 /* 54miles-logo-29@2x.png */; };
+		BB4DAFAD19E2E78E00C133F8 /* 54miles-logo-40.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4DAFA619E2E78E00C133F8 /* 54miles-logo-40.png */; };
+		BB4DAFAE19E2E78E00C133F8 /* 54miles-logo-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4DAFA719E2E78E00C133F8 /* 54miles-logo-40@2x.png */; };
+		BB4DAFAF19E2E78E00C133F8 /* 54miles-logo-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4DAFA819E2E78E00C133F8 /* 54miles-logo-50.png */; };
+		BB4DAFB119E2E78E00C133F8 /* 54miles-logo-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4DAFAA19E2E78E00C133F8 /* 54miles-logo-60@2x.png */; };
+		BB4DAFB519E2EA8400C133F8 /* 54miles-logo-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4DAFB419E2EA8400C133F8 /* 54miles-logo-50@2x.png */; };
+		BB4DAFBD19E2EBA400C133F8 /* 54miles-logo-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4DAFBC19E2EBA400C133F8 /* 54miles-logo-72@2x.png */; };
 		BB9446C2188EBDB400F52CF8 /* Trips_54Miles.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = BB9446C1188EBDB400F52CF8 /* Trips_54Miles.sqlite */; };
 		BB94474A18916E6700F52CF8 /* MagicalImportFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB94471118916E6700F52CF8 /* MagicalImportFunctions.m */; };
 		BB94474B18916E6700F52CF8 /* NSAttributeDescription+MagicalDataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = BB94471318916E6700F52CF8 /* NSAttributeDescription+MagicalDataImport.m */; };
@@ -85,6 +98,19 @@
 		BB14A1D318A5883D00AF04C6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 		BB14A1D518C1254300AF04C6 /* ML54tabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ML54tabbar.h; sourceTree = "<group>"; };
 		BB14A1D618C1254300AF04C6 /* ML54tabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ML54tabbar.m; sourceTree = "<group>"; };
+		BB4DAF9019E2E2AB00C133F8 /* 54miles-logo-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "54miles-logo-57.png"; sourceTree = "<group>"; };
+		BB4DAF9119E2E2AB00C133F8 /* 54miles-logo-57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "54miles-logo-57@2x.png"; sourceTree = "<group>"; };
+		BB4DAF9419E2E2AB00C133F8 /* 54miles-logo-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "54miles-logo-72.png"; sourceTree = "<group>"; };
+		BB4DAF9619E2E2AB00C133F8 /* 54miles-logo-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "54miles-logo-76.png"; sourceTree = "<group>"; };
+		BB4DAF9719E2E2AB00C133F8 /* 54miles-logo-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "54miles-logo-76@2x.png"; sourceTree = "<group>"; };
+		BB4DAFA419E2E78E00C133F8 /* 54miles-logo-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "54miles-logo-29.png"; sourceTree = "<group>"; };
+		BB4DAFA519E2E78E00C133F8 /* 54miles-logo-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "54miles-logo-29@2x.png"; sourceTree = "<group>"; };
+		BB4DAFA619E2E78E00C133F8 /* 54miles-logo-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "54miles-logo-40.png"; sourceTree = "<group>"; };
+		BB4DAFA719E2E78E00C133F8 /* 54miles-logo-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "54miles-logo-40@2x.png"; sourceTree = "<group>"; };
+		BB4DAFA819E2E78E00C133F8 /* 54miles-logo-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "54miles-logo-50.png"; sourceTree = "<group>"; };
+		BB4DAFAA19E2E78E00C133F8 /* 54miles-logo-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "54miles-logo-60@2x.png"; sourceTree = "<group>"; };
+		BB4DAFB419E2EA8400C133F8 /* 54miles-logo-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "54miles-logo-50@2x.png"; sourceTree = "<group>"; };
+		BB4DAFBC19E2EBA400C133F8 /* 54miles-logo-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "54miles-logo-72@2x.png"; sourceTree = "<group>"; };
 		BB9446C1188EBDB400F52CF8 /* Trips_54Miles.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trips_54Miles.sqlite; sourceTree = "<group>"; };
 		BB94471018916E6700F52CF8 /* MagicalImportFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalImportFunctions.h; sourceTree = "<group>"; };
 		BB94471118916E6700F52CF8 /* MagicalImportFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalImportFunctions.m; sourceTree = "<group>"; };
@@ -328,6 +354,19 @@
 		BBB9DDF518E20B48006A1FD1 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				BB4DAFA419E2E78E00C133F8 /* 54miles-logo-29.png */,
+				BB4DAFA519E2E78E00C133F8 /* 54miles-logo-29@2x.png */,
+				BB4DAFA619E2E78E00C133F8 /* 54miles-logo-40.png */,
+				BB4DAFA719E2E78E00C133F8 /* 54miles-logo-40@2x.png */,
+				BB4DAFA819E2E78E00C133F8 /* 54miles-logo-50.png */,
+				BB4DAFB419E2EA8400C133F8 /* 54miles-logo-50@2x.png */,
+				BB4DAFAA19E2E78E00C133F8 /* 54miles-logo-60@2x.png */,
+				BB4DAF9019E2E2AB00C133F8 /* 54miles-logo-57.png */,
+				BB4DAF9119E2E2AB00C133F8 /* 54miles-logo-57@2x.png */,
+				BB4DAF9419E2E2AB00C133F8 /* 54miles-logo-72.png */,
+				BB4DAFBC19E2EBA400C133F8 /* 54miles-logo-72@2x.png */,
+				BB4DAF9619E2E2AB00C133F8 /* 54miles-logo-76.png */,
+				BB4DAF9719E2E2AB00C133F8 /* 54miles-logo-76@2x.png */,
 				BBB9DE0618E3105A006A1FD1 /* home-logo.png */,
 				BBB9DE1218E3153A006A1FD1 /* email-icon.png */,
 				BBB9DE1318E3153A006A1FD1 /* email-icon@2x.png */,
@@ -504,17 +543,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBB9DE0D18E3105A006A1FD1 /* home-logo@2x.png in Resources */,
+				BB4DAFB519E2EA8400C133F8 /* 54miles-logo-50@2x.png in Resources */,
+				BB4DAFBD19E2EBA400C133F8 /* 54miles-logo-72@2x.png in Resources */,
 				BBB9DE1018E3105A006A1FD1 /* trip-icon.png in Resources */,
 				BBB9DE0F18E3105A006A1FD1 /* trip-edit-icon@2x.png in Resources */,
 				BBB9DE1518E3153A006A1FD1 /* email-icon@2x.png in Resources */,
 				BBB9DE1718E32364006A1FD1 /* 54miles-logo.png in Resources */,
+				BB4DAF9E19E2E2AB00C133F8 /* 54miles-logo-72.png in Resources */,
 				BBEBBBDA187C647D003F3027 /* Images.xcassets in Resources */,
 				BB9446C2188EBDB400F52CF8 /* Trips_54Miles.sqlite in Resources */,
+				BB4DAFAF19E2E78E00C133F8 /* 54miles-logo-50.png in Resources */,
 				BBC7AA1618D3686300944616 /* Settings.bundle in Resources */,
 				BBB9DE1118E3105A006A1FD1 /* trip-icon@2x.png in Resources */,
 				BBB9DE0E18E3105A006A1FD1 /* trip-edit-icon.png in Resources */,
+				BB4DAFAB19E2E78E00C133F8 /* 54miles-logo-29.png in Resources */,
+				BB4DAFAD19E2E78E00C133F8 /* 54miles-logo-40.png in Resources */,
+				BB4DAFAE19E2E78E00C133F8 /* 54miles-logo-40@2x.png in Resources */,
+				BB4DAFA119E2E2AB00C133F8 /* 54miles-logo-76@2x.png in Resources */,
 				BBB9DE1418E3153A006A1FD1 /* email-icon.png in Resources */,
+				BB4DAF9A19E2E2AB00C133F8 /* 54miles-logo-57.png in Resources */,
 				BBEBBBC9187C647D003F3027 /* InfoPlist.strings in Resources */,
+				BB4DAFA019E2E2AB00C133F8 /* 54miles-logo-76.png in Resources */,
+				BB4DAFB119E2E78E00C133F8 /* 54miles-logo-60@2x.png in Resources */,
+				BB4DAFAC19E2E78E00C133F8 /* 54miles-logo-29@2x.png in Resources */,
+				BB4DAF9B19E2E2AB00C133F8 /* 54miles-logo-57@2x.png in Resources */,
 				BB14A1D418A5883D00AF04C6 /* Main.storyboard in Resources */,
 				BBB9DE0C18E3105A006A1FD1 /* home-logo.png in Resources */,
 			);

@@ -50,7 +50,7 @@
     [df setDateFormat:@"MMMM"];
     NSString *currentMonth = [NSString stringWithFormat:@"%@", [df stringFromDate:date]];
     //NSLog(@"current month: %@", currentMonth);
-    int currentMonthIndex = [monthArray indexOfObject:currentMonth];
+    NSUInteger currentMonthIndex = [monthArray indexOfObject:currentMonth];
     //NSLog(@"Current month index: %d",currentMonthIndex);
     [_editMilesPicker selectRow:currentMonthIndex inComponent:0 animated:YES];
     //Initialize our yearArray
@@ -74,7 +74,7 @@
     //Reload the components because we've added things to our arrays
     [_editMilesPicker reloadAllComponents];
     //Set the picker component to the current year
-    int currentYearIndex = [yearArray indexOfObject:currentYear];
+    NSUInteger currentYearIndex = [yearArray indexOfObject:currentYear];
     [_editMilesPicker selectRow:currentYearIndex inComponent:1 animated:YES];
     //Set the variables for the tableview segue
     selectedMonthForSegue = [monthArray objectAtIndex:currentMonthIndex];

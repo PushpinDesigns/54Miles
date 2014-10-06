@@ -54,8 +54,8 @@
     //Set tripPicker components with appropriate values
     _begSchoolLabel.text = currentTrip.beg_school;
     _endSchoolLabel.text = currentTrip.end_school;
-    int indexValueComponent0 = [_schoolArray1 indexOfObject:currentTrip.beg_school];
-    int indexValueComponent1 = [_schoolArray2 indexOfObject:currentTrip.end_school];
+    NSUInteger indexValueComponent0 = [_schoolArray1 indexOfObject:currentTrip.beg_school];
+    NSUInteger indexValueComponent1 = [_schoolArray2 indexOfObject:currentTrip.end_school];
     [_tripPicker selectRow:indexValueComponent0 inComponent:0 animated:YES];
     [_tripPicker selectRow:indexValueComponent1 inComponent:1 animated:YES];
     
@@ -213,7 +213,7 @@
             UserMiles *lastTrip = [tripsSorted lastObject];
             NSString *preValue = lastTrip.end_school;
             _begSchoolLabel.text = preValue;
-            int indexValue = [_schoolArray1 indexOfObject:preValue];
+            NSUInteger indexValue = [_schoolArray1 indexOfObject:preValue];
             [_tripPicker selectRow:indexValue inComponent:0 animated:YES];
             
         }

@@ -69,7 +69,7 @@ MetaMiles *school;
         UserMiles *lastTrip = [tripsSorted lastObject];
         NSString *preValue = lastTrip.end_school;
         begSchoolLabel.text = preValue;
-        int indexValue = [_schoolArray1 indexOfObject:preValue];
+        NSUInteger indexValue = [_schoolArray1 indexOfObject:preValue];
         [_tripPicker selectRow:indexValue inComponent:0 animated:YES];
     }
     //Set end school labels for the second component in the picker
@@ -123,7 +123,7 @@ MetaMiles *school;
             UserMiles *lastTrip = [tripsSorted lastObject];
             NSString *preValue = lastTrip.end_school;
             begSchoolLabel.text = preValue;
-            int indexValue = [_schoolArray1 indexOfObject:preValue];
+            NSUInteger indexValue = [_schoolArray1 indexOfObject:preValue];
             [_tripPicker selectRow:indexValue inComponent:0 animated:YES];
         }
         //Set end school labels for the second component in the picker

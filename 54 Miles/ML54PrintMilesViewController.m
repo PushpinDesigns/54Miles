@@ -54,7 +54,7 @@
     //Get Current Month
     [df setDateFormat:@"MMMM"];
     NSString *currentMonth = [NSString stringWithFormat:@"%@", [df stringFromDate:date]];
-    int currentMonthIndex = [monthArray indexOfObject:currentMonth];
+    NSUInteger currentMonthIndex = [monthArray indexOfObject:currentMonth];
     [_datePicker selectRow:currentMonthIndex inComponent:0 animated:YES];
     //Initialize our yearArray
     yearArray = [[NSMutableArray alloc]init];
@@ -77,7 +77,7 @@
     //Reload the components because we've added things to our arrays
     [_datePicker reloadAllComponents];
     //Set the picker component to the current year
-    int currentYearIndex = [yearArray indexOfObject:currentYear];
+    NSUInteger currentYearIndex = [yearArray indexOfObject:currentYear];
     [_datePicker selectRow:currentYearIndex inComponent:1 animated:YES];
     //****END PICKERVIEW DATA****//
     selectedMonth = [monthArray objectAtIndex:currentMonthIndex];

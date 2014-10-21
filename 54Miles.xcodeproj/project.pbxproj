@@ -188,14 +188,14 @@
 		BBEBBBBE187C647D003F3027 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BBEBBBC0187C647D003F3027 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BBEBBBC2187C647D003F3027 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		BBEBBBC6187C647D003F3027 /* 54 Miles-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "54 Miles-Info.plist"; sourceTree = "<group>"; };
+		BBEBBBC6187C647D003F3027 /* 54Miles-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "54Miles-Info.plist"; sourceTree = "<group>"; };
 		BBEBBBC8187C647D003F3027 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BBEBBBCA187C647D003F3027 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BBEBBBCC187C647D003F3027 /* 54 Miles-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "54 Miles-Prefix.pch"; sourceTree = "<group>"; };
+		BBEBBBCC187C647D003F3027 /* 54Miles-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "54Miles-Prefix.pch"; sourceTree = "<group>"; };
 		BBEBBBCD187C647D003F3027 /* ML54AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ML54AppDelegate.h; sourceTree = "<group>"; };
 		BBEBBBCE187C647D003F3027 /* ML54AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ML54AppDelegate.m; sourceTree = "<group>"; };
 		BBEBBBD9187C647D003F3027 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BBEBBBDF187C647D003F3027 /* 54 MilesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "54 MilesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBEBBBDF187C647D003F3027 /* 54MilesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 54MilesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBEBBBE0187C647D003F3027 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BBEBBBF6187C648C003F3027 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BBEBBBFC187C65FF003F3027 /* 54Miles.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 54Miles.xcdatamodel; sourceTree = "<group>"; };
@@ -396,7 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				BBEBBBBB187C647D003F3027 /* 54 Miles.app */,
-				BBEBBBDF187C647D003F3027 /* 54 MilesTests.xctest */,
+				BBEBBBDF187C647D003F3027 /* 54MilesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -453,10 +453,10 @@
 		BBEBBBC5187C647D003F3027 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BBEBBBC6187C647D003F3027 /* 54 Miles-Info.plist */,
+				BBEBBBC6187C647D003F3027 /* 54Miles-Info.plist */,
 				BBEBBBC7187C647D003F3027 /* InfoPlist.strings */,
 				BBEBBBCA187C647D003F3027 /* main.m */,
-				BBEBBBCC187C647D003F3027 /* 54 Miles-Prefix.pch */,
+				BBEBBBCC187C647D003F3027 /* 54Miles-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -464,9 +464,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BBEBBBBA187C647D003F3027 /* 54 Miles */ = {
+		BBEBBBBA187C647D003F3027 /* 54Miles */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BBEBBBF0187C647E003F3027 /* Build configuration list for PBXNativeTarget "54 Miles" */;
+			buildConfigurationList = BBEBBBF0187C647E003F3027 /* Build configuration list for PBXNativeTarget "54Miles" */;
 			buildPhases = (
 				BBEBBBB7187C647D003F3027 /* Sources */,
 				BBEBBBB8187C647D003F3027 /* Frameworks */,
@@ -476,14 +476,14 @@
 			);
 			dependencies = (
 			);
-			name = "54 Miles";
+			name = 54Miles;
 			productName = "54 Miles";
 			productReference = BBEBBBBB187C647D003F3027 /* 54 Miles.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BBEBBBDE187C647D003F3027 /* 54 MilesTests */ = {
+		BBEBBBDE187C647D003F3027 /* 54MilesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BBEBBBF3187C647E003F3027 /* Build configuration list for PBXNativeTarget "54 MilesTests" */;
+			buildConfigurationList = BBEBBBF3187C647E003F3027 /* Build configuration list for PBXNativeTarget "54MilesTests" */;
 			buildPhases = (
 				BBEBBBDB187C647D003F3027 /* Sources */,
 				BBEBBBDC187C647D003F3027 /* Frameworks */,
@@ -494,9 +494,9 @@
 			dependencies = (
 				BBEBBBE5187C647E003F3027 /* PBXTargetDependency */,
 			);
-			name = "54 MilesTests";
+			name = 54MilesTests;
 			productName = "54 MilesTests";
-			productReference = BBEBBBDF187C647D003F3027 /* 54 MilesTests.xctest */;
+			productReference = BBEBBBDF187C647D003F3027 /* 54MilesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -517,7 +517,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BBEBBBB6187C647D003F3027 /* Build configuration list for PBXProject "54 Miles" */;
+			buildConfigurationList = BBEBBBB6187C647D003F3027 /* Build configuration list for PBXProject "54Miles" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -531,8 +531,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BBEBBBBA187C647D003F3027 /* 54 Miles */,
-				BBEBBBDE187C647D003F3027 /* 54 MilesTests */,
+				BBEBBBBA187C647D003F3027 /* 54Miles */,
+				BBEBBBDE187C647D003F3027 /* 54MilesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -640,7 +640,7 @@
 /* Begin PBXTargetDependency section */
 		BBEBBBE5187C647E003F3027 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BBEBBBBA187C647D003F3027 /* 54 Miles */;
+			target = BBEBBBBA187C647D003F3027 /* 54Miles */;
 			targetProxy = BBEBBBE4187C647E003F3027 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -734,10 +734,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Schaumburg Community Consolidated School District 54";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "54 Miles/54 Miles-Prefix.pch";
-				INFOPLIST_FILE = "54 Miles/54 Miles-Info.plist";
+				GCC_PREFIX_HEADER = "54 Miles/54Miles-Prefix.pch";
+				INFOPLIST_FILE = "54 Miles/54Miles-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = 54Miles;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -750,10 +750,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Schaumburg Community Consolidated School District 54";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "54 Miles/54 Miles-Prefix.pch";
-				INFOPLIST_FILE = "54 Miles/54 Miles-Info.plist";
+				GCC_PREFIX_HEADER = "54 Miles/54Miles-Prefix.pch";
+				INFOPLIST_FILE = "54 Miles/54Miles-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = 54Miles;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -775,7 +775,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "54 MilesTests/54 MilesTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = 54MilesTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -793,7 +793,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "54 Miles/54 Miles-Prefix.pch";
 				INFOPLIST_FILE = "54 MilesTests/54 MilesTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = 54MilesTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -802,7 +802,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BBEBBBB6187C647D003F3027 /* Build configuration list for PBXProject "54 Miles" */ = {
+		BBEBBBB6187C647D003F3027 /* Build configuration list for PBXProject "54Miles" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BBEBBBEE187C647E003F3027 /* Debug */,
@@ -811,7 +811,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BBEBBBF0187C647E003F3027 /* Build configuration list for PBXNativeTarget "54 Miles" */ = {
+		BBEBBBF0187C647E003F3027 /* Build configuration list for PBXNativeTarget "54Miles" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BBEBBBF1187C647E003F3027 /* Debug */,
@@ -820,7 +820,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BBEBBBF3187C647E003F3027 /* Build configuration list for PBXNativeTarget "54 MilesTests" */ = {
+		BBEBBBF3187C647E003F3027 /* Build configuration list for PBXNativeTarget "54MilesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BBEBBBF4187C647E003F3027 /* Debug */,

@@ -184,7 +184,7 @@
 		BBC7AA1318CF96B900944616 /* ML54EditTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ML54EditTripViewController.m; sourceTree = "<group>"; };
 		BBC7AA1518D3686300944616 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BBC7AA7D18D9CCD800944616 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		BBEBBBBB187C647D003F3027 /* 54 Miles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "54 Miles.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBEBBBBB187C647D003F3027 /* 54Miles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 54Miles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBEBBBBE187C647D003F3027 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BBEBBBC0187C647D003F3027 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BBEBBBC2187C647D003F3027 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -395,7 +395,7 @@
 		BBEBBBBC187C647D003F3027 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BBEBBBBB187C647D003F3027 /* 54 Miles.app */,
+				BBEBBBBB187C647D003F3027 /* 54Miles.app */,
 				BBEBBBDF187C647D003F3027 /* 54MilesTests.xctest */,
 			);
 			name = Products;
@@ -478,7 +478,7 @@
 			);
 			name = 54Miles;
 			productName = "54 Miles";
-			productReference = BBEBBBBB187C647D003F3027 /* 54 Miles.app */;
+			productReference = BBEBBBBB187C647D003F3027 /* 54Miles.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BBEBBBDE187C647D003F3027 /* 54MilesTests */ = {
@@ -673,7 +673,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Schaumburg Community Consolidated School District 54";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Schaumburg Community Consolidated School District 54";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -711,7 +712,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Schaumburg Community Consolidated School District 54";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Schaumburg Community Consolidated School District 54";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -733,11 +735,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Schaumburg Community Consolidated School District 54";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Schaumburg Community Consolidated School District 54";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "54 Miles/54Miles-Prefix.pch";
 				INFOPLIST_FILE = "54 Miles/54Miles-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = 54Miles;
+				PROVISIONING_PROFILE = "076b6f66-862e-4666-865f-3ba5b71fe32d";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -749,11 +753,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Schaumburg Community Consolidated School District 54";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Schaumburg Community Consolidated School District 54";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "54 Miles/54Miles-Prefix.pch";
 				INFOPLIST_FILE = "54 Miles/54Miles-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = 54Miles;
+				PROVISIONING_PROFILE = "076b6f66-862e-4666-865f-3ba5b71fe32d";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

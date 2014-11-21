@@ -201,7 +201,7 @@
     allTableData = [_fetchedResultsController fetchedObjects];
     
     NSString *header = @"<?xml version=\"1.0\"?>\n<?mso-application progid=\"Excel.Sheet\"?>\n<Workbook xmlns=\"urn:schemas-microsoft-com:office:spreadsheet\"\nxmlns:o=\"urn:schemas-microsoft-com:office:office\"\nxmlns:x=\"urn:schemas-microsoft-com:office:excel\"\nxmlns:ss=\"urn:schemas-microsoft-com:office:spreadsheet\"\nxmlns:html=\"http://www.w3.org/TR/REC-html40\">\n<Styles><Style ss:ID=\"s11\"><Alignment ss:Horizontal=\"Center\" ss:Vertical=\"Bottom\"/><Borders><Border ss:Position=\"Bottom\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/><Border ss:Position=\"Left\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/><Border ss:Position=\"Right\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/><Border ss:Position=\"Top\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/></Borders></Style><Style ss:ID=\"s12\"><Alignment ss:Horizontal=\"Center\" ss:Vertical=\"Bottom\"/></Style><Style ss:ID=\"s13\"><Alignment ss:Horizontal=\"Center\" ss:Vertical=\"Bottom\"/><Font ss:Bold=\"1\"/></Style><Style ss:ID=\"s14\"><Alignment ss:Horizontal=\"Center\" ss:Vertical=\"Bottom\"/><Borders><Border ss:Position=\"Bottom\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/><Border ss:Position=\"Left\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/><Border ss:Position=\"Right\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/><Border ss:Position=\"Top\" ss:LineStyle=\"Continuous\" ss:Weight=\"1\"/></Borders><Font ss:Bold=\"1\"/><Interior ss:Color=\"#C0C0C0\" ss:Pattern=\"Solid\"/></Style><Style ss:ID=\"s15\"><Alignment ss:Horizontal=\"Center\" ss:Vertical=\"Bottom\"/><Font ss:Bold=\"1\"/><NumberFormat ss:Format=\"&quot;$&quot;#,##0.00\"/></Style></Styles>\n<Worksheet ss:Name=\"54Mileage\">\n<Table ss:DefaultColumnWidth=\"117\">\n";
-    NSString *columnAutoWidth30 = @"<Column ss:AutoFitWidth=\"1\" ss:Width=\"170\"/>\n";
+    NSString *columnAutoWidth30 = @"<Column ss:AutoFitWidth=\"1\" ss:Width=\"100\"/>\n";
     NSString *columnAutoWidth16 = @"<Column ss:AutoFitWidth=\"1\" ss:Width=\"95\"/>\n";
     //NSString *columncount = @"\" ss:ExpandedRowCount=\"";
     //NSString *rowcount = @"\" x:FullColumns=\"1\"x:FullRows=\"1\">\n";
@@ -243,13 +243,17 @@
     xlsstring = [NSString stringWithFormat:@"%@%@%@%@%@%@", header,columnAutoWidth30,columnAutoWidth16,columnAutoWidth16,columnAutoWidth16,columnAutoWidth16];
     
     //MAIN CONTENTS BEGINNING//
-    //Setup Line1
-    NSString *line1Date = [NSString stringWithFormat:@"%@ %@", selectedMonth, selectedYear];
-    xlsstring = [xlsstring stringByAppendingFormat:@"%@ %@Month/Year:%@ %@%@%@ %@%@ %@Account Code:%@ %@", rowStart,centeredStringStart,centeredStringEnd,centeredStringStart,line1Date,centeredStringEnd,centeredStringStart,centeredStringEnd,stringStart, stringEnd,rowEnd];
+    //Person Making Claim line
+    xlsstring = [xlsstring stringByAppendingFormat:@"%@ %@Person Making Claim:%@ %@%@%@ %@%@ %@Signature: %@ %@%@ %@", rowStart, stringStart, stringEnd, stringStart,[[NSUserDefaults standardUserDefaults] objectForKey:@"fullName"], stringEnd, stringStart, stringEnd, stringStart, stringEnd, stringStart, stringEnd, rowEnd ];
     //Blank Line
     xlsstring = [xlsstring stringByAppendingFormat:@"%@%@", rowStart, rowEnd];
-    //Line3
-    xlsstring = [xlsstring stringByAppendingFormat:@"%@ %@School:%@ %@%@%@ %@%@ %@Home Address:%@ %@%@%@ %@", rowStart, centeredStringStart, centeredStringEnd, centeredStringStart, [[NSUserDefaults standardUserDefaults] objectForKey:@"baseSchool"], centeredStringEnd, centeredStringStart, centeredStringEnd, stringStart, stringEnd, stringStart, [[NSUserDefaults standardUserDefaults] objectForKey:@"homeAddress"],stringEnd, rowEnd];
+    //Month/Year & Account Code Line
+    NSString *line1Date = [NSString stringWithFormat:@"%@ %@", selectedMonth, selectedYear];
+    xlsstring = [xlsstring stringByAppendingFormat:@"%@ %@Month/Year:%@ %@%@%@ %@%@ %@Account Code:%@ %@", rowStart,stringStart,stringEnd,stringStart,line1Date,stringEnd,stringStart,stringEnd,stringStart, stringEnd,rowEnd];
+    //Blank Line
+    xlsstring = [xlsstring stringByAppendingFormat:@"%@%@", rowStart, rowEnd];
+    //School / Address Line
+    xlsstring = [xlsstring stringByAppendingFormat:@"%@ %@School:%@ %@%@%@ %@%@ %@Home Address:%@ %@%@%@ %@", rowStart, stringStart, stringEnd, stringStart, [[NSUserDefaults standardUserDefaults] objectForKey:@"baseSchool"], stringEnd, stringStart, stringEnd, stringStart, stringEnd, stringStart, [[NSUserDefaults standardUserDefaults] objectForKey:@"homeAddress"],stringEnd, rowEnd];
     //Blank Line
     xlsstring = [xlsstring stringByAppendingFormat:@"%@%@", rowStart, rowEnd];
     //Header of Data
@@ -270,10 +274,6 @@
     //Formula Row
     NSString *formattedAmount = [NSString stringWithFormat:@"@%@", _mileageRateTextField.text];
     xlsstring = [xlsstring stringByAppendingFormat:@"%@ %@Total Miles:%@ %@%@ %@%@%@ %@%@ %@", rowStart, centeredBoldStringStart, stringEnd, totalMilesFormulaStart, totalMilesFormulaEnd, centeredBoldStringStart, formattedAmount, stringEnd, dollarAmountFormulaStart, dollarAmountFormulaEnd, rowEnd];
-    //Blank Line
-    xlsstring = [xlsstring stringByAppendingFormat:@"%@%@", rowStart, rowEnd];
-    //Person Making Claim line
-    xlsstring = [xlsstring stringByAppendingFormat:@"%@ %@Person Making Claim (signature):%@ %@%@ %@%@ %@(Printed Name): %@ %@%@%@ %@", rowStart, centeredStringStart, stringEnd, centeredStringStart, stringEnd, centeredStringStart, stringEnd, centeredStringStart, stringEnd, stringStart, [[NSUserDefaults standardUserDefaults] objectForKey:@"fullName"], stringEnd, rowEnd ];
     //Blank Line
     xlsstring = [xlsstring stringByAppendingFormat:@"%@%@", rowStart, rowEnd];
     //Approved By line

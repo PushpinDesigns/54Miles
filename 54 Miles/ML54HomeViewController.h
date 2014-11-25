@@ -10,11 +10,12 @@
 
 @class ML54UserProfileViewController;
 
-@interface ML54HomeViewController : UIViewController <UITableViewDataSource, UITabBarDelegate>
+@interface ML54HomeViewController : UIViewController <NSFetchedResultsControllerDelegate, UITableViewDataSource, UITabBarDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *progName;
 @property (strong, nonatomic) IBOutlet UILabel *activityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userName;
+@property (nonatomic,strong) NSFetchedResultsController *tripsController;
 @property (strong, nonatomic) IBOutlet UITableView *recentMilesTable;
 
 @end

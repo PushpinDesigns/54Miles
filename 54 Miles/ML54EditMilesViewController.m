@@ -31,14 +31,17 @@
     return self;
 }
 - (void)viewWillAppear:(BOOL)animated {
-    //[self.tableView reloadData];
-    //[self.tableView reloadInputViews];
+    
     self.userMilesData = [NSMutableArray array];
     NSPredicate *monthPredicates = [self predicateToRetrieveMonthTrips];
     _fetchedResultsController = [UserMiles MR_fetchAllSortedBy:@"driven_date" ascending:YES withPredicate:monthPredicates groupBy:nil delegate:self];
     NSError *error;
     [_fetchedResultsController performFetch:&error];
     allTableData = [_fetchedResultsController fetchedObjects];
+    //Reverse Data to match what is being displayed
+    allTableData = [[allTableData reverseObjectEnumerator] allObjects];
+    NSLog(@"Edit Miles Table Data Order: %@",allTableData);
+    
     [self.tableView reloadData];
 }
 - (void)viewDidLoad
@@ -50,6 +53,7 @@
     NSError *error;
     [_fetchedResultsController performFetch:&error];
     allTableData = [_fetchedResultsController fetchedObjects];
+
     //HANDLE IF THE ARRAY IS EMPTY!!!!!!!!//
     if (!allTableData) {
     }
@@ -96,7 +100,7 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    UserMiles *cellInfo = [_fetchedResultsController objectAtIndexPath:indexPath];
+    UserMiles *cellInfo = allTableData[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ to %@", cellInfo.beg_school, cellInfo.end_school];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
     dateFormat.dateFormat = @"MM/dd/yyyy";
@@ -158,7 +162,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UserMiles *cellDetails = [_fetchedResultsController objectAtIndexPath:indexPath];
+    UserMiles *cellDetails = allTableData[indexPath.row];
     begSchool = [cellDetails beg_school];
     endSchool = [cellDetails end_school];
     drivenDate = [cellDetails driven_date];

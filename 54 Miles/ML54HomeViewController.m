@@ -19,6 +19,7 @@
 @implementation ML54HomeViewController
 {
     NSArray *trips;
+    NSArray *allHomeTableData;
 }
 
 
@@ -31,14 +32,13 @@
     return self;
 }
 - (void)viewWillAppear:(BOOL)animated {
-    trips = [UserMiles MR_findAllSortedBy:@"driven_date" ascending:YES];
-    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"driven_date" ascending:YES];
-    if (trips != nil){
-    trips = [trips sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
-    //reverse the array so the 5 most recent are the first 5 listed
-    trips = [[trips reverseObjectEnumerator] allObjects];
-    } else {
-    }
+    
+    _tripsController = [UserMiles MR_fetchAllSortedBy:@"driven_date" ascending:YES withPredicate:nil groupBy:nil delegate:self];
+    NSError *error;
+    [_tripsController performFetch:&error];
+    allHomeTableData = [_tripsController fetchedObjects];
+    allHomeTableData = [[allHomeTableData reverseObjectEnumerator] allObjects];
+    
     [self.recentMilesTable reloadData];
 }
 - (void)viewDidLoad
@@ -53,11 +53,12 @@
     //Update UI with Welcome
     self.userName.text = welcome;
     self.recentMilesTable.dataSource = self;
-    trips = [UserMiles MR_findAllSortedBy:@"driven_date" ascending:YES];
-    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"driven_date" ascending:YES];
-    trips = [trips sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
-    //reverse the array so the 5 most recent are the first 5 listed
-    trips = [[trips reverseObjectEnumerator] allObjects];
+    
+    _tripsController = [UserMiles MR_fetchAllSortedBy:@"driven_date" ascending:YES withPredicate:nil groupBy:nil delegate:self];
+    NSError *error;
+    [_tripsController performFetch:&error];
+    allHomeTableData = [_tripsController fetchedObjects];
+    
     [self.recentMilesTable reloadData];
     //Refresh the view if coming from the profile view (first run of App)
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadView:) name:@"updateParent" object:nil];
@@ -91,9 +92,9 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if ([trips count]<5)
+    if ([allHomeTableData count]<5)
     {
-        return [trips count];
+        return [allHomeTableData count];
     } else {
         return 5;
     }
@@ -105,7 +106,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle  reuseIdentifier:MyIdentifier];
     }
-    UserMiles *cellInfo = [self milesAtIndex:indexPath.row];
+    UserMiles *cellInfo = allHomeTableData[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ to %@", cellInfo.beg_school, cellInfo.end_school];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
     dateFormat.dateFormat = @"MM/dd/yyyy";

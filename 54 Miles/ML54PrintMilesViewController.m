@@ -236,7 +236,7 @@
     NSString *dollarAmountFormulaEnd = @"</Data></Cell>";
     
     //Needed to set the default pagebreak after the data
-    NSString *worksheetOptions = @"\n<WorksheetOptions xmlnx=\"urn:schemas-microsoft-com:office:excel\">\n<Print>\n<ValidPrinterInfo/>\n<Scale>90</Scale>\n</Print>\n</WorksheetOptions>\n";
+    NSString *worksheetOptions = @"\n<WorksheetOptions xmlns=\"urn:schemas-microsoft-com:office:excel\">\n<Print>\n<ValidPrinterInfo/>\n<Scale>90</Scale>\n</Print>\n</WorksheetOptions>\n";
     
     NSString *footer = [NSString stringWithFormat:@"</Table>%@</Worksheet>\n</Workbook>", worksheetOptions];
     

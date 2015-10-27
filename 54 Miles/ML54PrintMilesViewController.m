@@ -42,7 +42,7 @@
     _suggestedMileageLabel.text = @"$0.00";
     //****PICKERVIEW SETUP****//
     NSDate *date = [NSDate date];
-    NSCalendar *calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSGregorianCalendar];
+    NSCalendar *calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *dateComponents = [[NSDateComponents alloc]init];
     NSDateFormatter *df = [[NSDateFormatter alloc]init];
     [df setTimeZone:[NSTimeZone localTimeZone]];
@@ -297,7 +297,7 @@
 - (NSPredicate *)predicateToRetrieveMonthTrips {
     //Standard date format
     //YYYY-MM-dd HH:mm:ss
-    NSCalendar *calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSGregorianCalendar];
+    NSCalendar *calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *dateComponents = [[NSDateComponents alloc]init];
     NSDateFormatter *df = [[NSDateFormatter alloc]init];
     [df setTimeZone:[NSTimeZone localTimeZone]];

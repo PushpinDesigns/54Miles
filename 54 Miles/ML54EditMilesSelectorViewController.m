@@ -32,7 +32,7 @@
 	// Do any additional setup after loading the view.
     _editMilesbutton.layer.cornerRadius = 13;
     NSDate *date = [NSDate date];
-    NSCalendar *calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSGregorianCalendar];
+    NSCalendar *calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *dateComponents = [[NSDateComponents alloc]init];
     NSDateFormatter *df = [[NSDateFormatter alloc]init];
     [df setTimeZone:[NSTimeZone localTimeZone]];

@@ -34,7 +34,7 @@ static NSString *const mileageStore = @"54Miles";
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"deleteDatabase"]==YES){
         [UserMiles MR_truncateAll];
         [[NSManagedObjectContext MR_defaultContext]MR_saveToPersistentStoreAndWait];
-        [[NSUserDefaults standardUserDefaults] setValue:NO forKey:@"deleteDatabase"];
+        [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"deleteDatabase"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         NSLog(@"Database should be deleted");
     };
